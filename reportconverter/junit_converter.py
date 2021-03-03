@@ -12,8 +12,6 @@ class JunitConverter(BaseConverter):
         reports = []
 
         for testsuit in testsuites:
-            print(testsuit.getAttribute("name"))
-
             testcase_reports = []
 
             testcases = testsuit.getElementsByTagName("testcase")
