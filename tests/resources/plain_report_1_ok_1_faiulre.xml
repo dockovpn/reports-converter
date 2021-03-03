@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="1" name="TestSuite" skipped="0" tests="2" time="0.017" timestamp="2021-02-21T16:37:14">
+  <testcase classname="TestCase" name="Test case 1" time="0.006"/>
+  <testcase classname="TestCase" name="Test case 2" time="0.006">
+    <failure>Dummy stack trace</failure>
+  </testcase>
+</testsuite>

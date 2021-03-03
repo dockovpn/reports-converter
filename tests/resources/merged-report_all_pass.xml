@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<testsuites>
+    <testsuite hostname="Aleksandrs-MacBook-Pro.local" name="TestSuite1" tests="2" errors="0" failures="0" skipped="0" time="0.017" timestamp="2021-02-21T16:37:14">
+      <testcase classname="TestClass1" name="Test case 1" time="0.006"></testcase>
+      <testcase classname="TestClass1" name="Test case 2" time="0.011"></testcase>
+    </testsuite>
+<testsuite hostname="Aleksandrs-MacBook-Pro.local" name="TestSuite2" tests="1" errors="0" failures="0" skipped="0" time="0.042" timestamp="2021-02-21T16:37:14">
+  <testcase classname="TestClass2" name="Test case 1" time="0.042"></testcase>
+</testsuite>
+</testsuites>
