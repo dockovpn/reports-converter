@@ -1,1 +1,0 @@
-{"testsuites": [{"name": "TestSuite", "tests": "1", "failures": "0", "errors": "0", "skipped": "0", "time": "0.017", "timestamp": "2021-02-21T16:37:14", "testcases": [{"classname": "TestSuite", "name": "TestSuite", "time": "0.017", "passes": true}]}]}

@@ -2,3 +2,8 @@ venv
 **/.pytest_cache
 **/__pycache__
 **/.idea
+main
+main.spec
+dist
+build
+output.txt
