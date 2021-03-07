@@ -1,0 +1,12 @@
+README.md
+setup.py
+bin/report-converter
+reportconverter/__init__.py
+reportconverter/base_converter.py
+reportconverter/junit_converter.py
+reportconverter/report_converter.py
+reportconverter/xml_to_json_converter.py
+reportconverter.egg-info/PKG-INFO
+reportconverter.egg-info/SOURCES.txt
+reportconverter.egg-info/dependency_links.txt
+reportconverter.egg-info/top_level.txt
