@@ -1,5 +1,3 @@
-from reportconverter.junit_converter import JunitConverter
-
 
 def test_converts_plain_junit_report(json_report_from_junit_xml):
     json_obj = json_report_from_junit_xml("plain_report_all_pass")
@@ -16,12 +14,8 @@ def test_converts_plain_junit_report(json_report_from_junit_xml):
     assert testcase["passes"] is True
 
 
-def test_converts_plain_junit_report_with_1_failure():
-    with open("tests/resources/plain_report_1_ok_1_faiulre.xml", "r") as report_xml:
-        report_xml_contents = report_xml.read()
-
-    junit_converter = JunitConverter()
-    json_obj = junit_converter.convert(report_xml_contents)
+def test_converts_plain_junit_report_with_1_failure(json_report_from_junit_xml):
+    json_obj = json_report_from_junit_xml("plain_report_1_ok_1_failure")
     # breakpoint()
     assert len(json_obj["testsuites"]) == 1
     testsuit = json_obj["testsuites"][0]
@@ -37,12 +31,8 @@ def test_converts_plain_junit_report_with_1_failure():
     assert testcase2["passes"] is False
 
 
-def test_converts_merged_junit_report():
-    with open("tests/resources/merged-report_all_pass.xml", "r") as report_xml:
-        report_xml_contents = report_xml.read()
-
-    junit_converter = JunitConverter()
-    json_obj = junit_converter.convert(report_xml_contents)
+def test_converts_merged_junit_report(json_report_from_junit_xml):
+    json_obj = json_report_from_junit_xml("merged_report_all_pass")
     # breakpoint()
     assert len(json_obj["testsuites"]) == 2
 
