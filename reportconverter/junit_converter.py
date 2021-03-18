@@ -1,11 +1,11 @@
-from reportconverter.base_converter import BaseConverter
 import xml.dom.minidom
-import json
+
+from reportconverter.base_converter import BaseConverter
 
 
 class JunitConverter(BaseConverter):
 
-    def convert(self, input_file_contents: str) -> str:
+    def convert(self, input_file_contents: str) -> dict:
         doc = xml.dom.minidom.parseString(input_file_contents)
         testsuites = doc.getElementsByTagName("testsuite")
 
@@ -28,10 +28,10 @@ class JunitConverter(BaseConverter):
 
             report = {
                 "name": testsuit.getAttribute("name"),
-                "tests": testsuit.getAttribute("tests"),
-                "failures": testsuit.getAttribute("failures"),
-                "errors": testsuit.getAttribute("errors"),
-                "skipped": testsuit.getAttribute("skipped"),
+                "tests": int(testsuit.getAttribute("tests")),
+                "failures": int(testsuit.getAttribute("failures")),
+                "errors": int(testsuit.getAttribute("errors")),
+                "skipped": int(testsuit.getAttribute("skipped")),
                 "time": testsuit.getAttribute("time"),
                 "timestamp": testsuit.getAttribute("timestamp"),
                 "testcases": testcase_reports
@@ -43,4 +43,4 @@ class JunitConverter(BaseConverter):
             "testsuites": reports
         }
 
-        return json.dumps(reports_json)
+        return reports_json
