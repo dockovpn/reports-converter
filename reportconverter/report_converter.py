@@ -21,7 +21,7 @@ def convert_report(input_file_path: str, output_file_path: str, input_format: st
         xml_str = input_file.read()
 
     cicd_json = convert_report_to_cicd_format(xml_str, input_format)
-    cicd_json_str = json.dumps(cicd_json)
+    cicd_json_str = json.dumps(cicd_json, indent=3)
 
     with open(output_file_path, "w") as output_file:
         output_file.write(cicd_json_str)

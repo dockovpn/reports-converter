@@ -18,9 +18,9 @@ class JunitConverter(BaseConverter):
 
             for testcase in testcases:
                 testcase_report = {
-                    "classname": testsuit.getAttribute("name"),
-                    "name": testsuit.getAttribute("name"),
-                    "time": testsuit.getAttribute("time"),
+                    "classname": testcase.getAttribute("classname"),
+                    "name": testcase.getAttribute("name"),
+                    "time": testcase.getAttribute("time"),
                     "passes": len(testcase.getElementsByTagName("failure")) == 0,
                 }
 
