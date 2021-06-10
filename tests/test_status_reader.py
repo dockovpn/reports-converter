@@ -17,3 +17,9 @@ def test_status_from_report_merged(status_from_report):
     status = status_from_report("merged_report_all_pass")
 
     assert status == Status.PASSING
+
+
+def test_status_from_json(status_from_json_report):
+    status = status_from_json_report("dockovpn-faulty")
+
+    assert status == Status.FAILING

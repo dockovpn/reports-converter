@@ -1,0 +1,51 @@
+{
+   "testsuites": [
+      {
+         "name": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+         "tests": 6,
+         "failures": 2,
+         "errors": 0,
+         "skipped": 0,
+         "time": "5.025",
+         "timestamp": "2021-06-09T21:13:23",
+         "testcases": [
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should start successfully",
+               "time": "0.049",
+               "passes": true
+            },
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should provide client config via http only once",
+               "time": "0.042",
+               "passes": true
+            },
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should accept connection from OpenVPN client with downloaded config",
+               "time": "1.063",
+               "passes": false
+            },
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should accept connections from 2 OpenVPN clients that share same config",
+               "time": "2.582",
+               "passes": false
+            },
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should execute 'version' command successfully",
+               "time": "0.202",
+               "passes": true
+            },
+            {
+               "classname": "com.alekslitvinenk.testcontainers.DockovpnAdvertisedSettingsIT",
+               "name": "DockovpnContainer should execute 'genclient' command successfully",
+               "time": "1.087",
+               "passes": true
+            }
+         ]
+      }
+   ]
+}
