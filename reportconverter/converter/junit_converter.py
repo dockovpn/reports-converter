@@ -1,6 +1,6 @@
 import xml.dom.minidom
 
-from reportconverter.base_converter import BaseConverter
+from reportconverter.converter.base_converter import BaseConverter
 
 
 class JunitConverter(BaseConverter):
@@ -17,11 +17,18 @@ class JunitConverter(BaseConverter):
             testcases = testsuit.getElementsByTagName("testcase")
 
             for testcase in testcases:
+                failures = testcase.getElementsByTagName("failure")
+                failure_data = None
+                for failure in failures:
+                    failure_data = failure.firstChild.data
+
                 testcase_report = {
                     "classname": testcase.getAttribute("classname"),
                     "name": testcase.getAttribute("name"),
                     "time": testcase.getAttribute("time"),
                     "passes": len(testcase.getElementsByTagName("failure")) == 0,
+                    "skipped": len(testcase.getElementsByTagName("skipped")) != 0,
+                    "failure": failure_data
                 }
 
                 testcase_reports.append(testcase_report)
