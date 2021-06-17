@@ -1,7 +1,7 @@
 import pytest
 import json
 
-from reportconverter.junit_converter import JunitConverter
+from reportconverter.converter.junit_converter import JunitConverter
 from reportconverter.status_reader import StatusReader
 
 

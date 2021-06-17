@@ -1,7 +1,7 @@
 import json
 
-from reportconverter.base_converter import BaseConverter
-from reportconverter.junit_converter import JunitConverter
+from reportconverter.converter.base_converter import BaseConverter
+from reportconverter.converter.junit_converter import JunitConverter
 from reportconverter.status_reader import StatusReader
 
 junit_format = "junit"
